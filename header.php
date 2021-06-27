@@ -6,9 +6,9 @@
 </head>
 <body>
   <header>
-    <div class="logo-container">
-      <a href="/pokedex">
-        <img class="logo" src="<?php echo get_template_directory_uri() . "/img/logo.jpeg" ?>"/>
+    <!-- <div class="logo-container">
+      <a href="/dispatcher">
+        <img class="logo" src="< ?php echo get_template_directory_uri() . "/img/logo.jpeg" ?>"/>
       </a>
-    </div>  
+    </div>   -->
   </header>
