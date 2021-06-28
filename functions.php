@@ -29,5 +29,10 @@ function console_log($output, $with_script_tags = true) {
   }
   echo $js_code;
 }
-
+function print_options($option){
+  $option = ucfirst($option);
+  ?>    
+  <option value="<?php echo $option ?>"><?php echo $option ?></option>
+  <?php
+}
 ?>
