@@ -1,196 +1,79 @@
 /*
-    Theme Name: Pokedex
+    Theme Name: Dispatcher
     Theme URI: 
     Author: Nir Kahana
     Author URI: 
-    Description: Theme for Pokemons
+    Description: Theme for the dispatcher
     Version: 1.0
     License: GNU Public License v2 or later
     License URI: http://www.gnu.org/licenses/glp-2.0.html
-    Tags: pokemon, mobile first, responsive, pokedex
-    Text Domain: pokedex
+    Tags: pokemon, mobile first, responsive, dispatcher
+    Text Domain: dispatcher
 */
 :root {
-  --main-bg-color: #FCFCFC;
-  --light-grey: #F7F7F9;
-  --light-blue: #373299;
+  --main-bg-color: #F8F8FF;
 
-  --normal-bg-color: #A8A77A;
-  --fire-bg-color: #EE8130;
-  --water-bg-color: #6390F0;
-  --electric-bg-color: #F7D02C;
-  --grass-bg-color: #7AC74C;
-  --ice-bg-color: #96D9D6;
-  --fighting-bg-color: #C22E28;
-  --poison-bg-color: #A33EA1;
-  --ground-bg-color: #E2BF65;
-  --flying-bg-color: #A98FF3;
-  --psychic-bg-color: #F95587;
-  --bug-bg-color: #A6B91A;
-  --rock-bg-color: #B6A136;
-  --ghost-bg-color: #735797;
-  --dragon-bg-color: #6F35FC;
-  --dark-bg-color: #705746;
-  --steel-bg-color: #B7B7CE;
-  --fairy-bg-color: #D685AD;
+  --light-pink: #F3F3FF;
+  --light-grey: #D9DBE9;
+  --blue: #0058B9;
+  --light-purple: #5A5A89;
+  --light-opaque-purple: #5A5A89 50%;
+  --dark-purple: #262146;
+  --black: #14142B;
+  --white: #FFFFFF;
 }
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
   background: var(--main-bg-color);
+  font-family: 'Roboto', sans-serif;
   color: var(--light-blue);
 }
-h4 {
-  margin: 5px 0;
-  font-weight: 500;
+.tag {
+  width: 57px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  margin: 0px 10px;
+  background-color: var(--light-pink);
+  font-family: 'Poppins', sans-serif;
+  color: var(--light-purple);
 }
-.h200px {
-  height: 200px;
-}
-.w200px {
-  width: 200px;
-}
-.weight400 {
-  font-weight: 400;
-}
-.flex-column {
+.button {
   display: flex;
-  flex-direction: column;
-}
-.flex-row {
-  display: flex;
-}
-.justify-evenly {
+  align-items: center;
   justify-content: space-evenly;
-}
-.relative {
-  position: relative;
-}
-.logo-container {
-  background: var(--main-bg-color);
-  text-align: center;
-  margin: 3em;
-}
-.logo {
-  display: inline-block;
-  width: 387px;
-  height: 140px;
-}
 
-.normal {
-  background-color: var(--normal-bg-color);
-}
-.fire {
-  background-color: var(--fire-bg-color);
-}
-.water {
-  background-color: var(--water-bg-color);
-}
-.electric {
-  background-color: var(--electric-bg-color);
-}
-.grass {
-  background-color: var(--grass-bg-color);
-}
-.ice {
-  background-color: var(--ice-bg-color);
-}
-.fighting {
-  background-color: var(--fighting-bg-color);
-}
-.poison {
-  background-color: var(--poison-bg-color);
-}
-.ground {
-  background-color: var(--ground-bg-color);
-}
-.flying {
-  background-color: var(--flying-bg-color);
-}
-.psychic {
-  background-color: var(--psychic-bg-color);
-}
-.bug {
-  background-color: var(--bug-bg-color);
-}
-.rock {
-  background-color: var(--rock-bg-color);
-}
-.ghost {
-  background-color: var(--ghost-bg-color);
-}
-.dragon {
-  background-color: var(--dragon-bg-color);
-}
-.dark {
-  background-color: var(--dark-bg-color);
-}
-.steel {
-  background-color: var(--steel-bg-color);
-}
-.fairy {
-  background-color: var(--fairy-bg-color);
-}
+  /* width: 226px; */
+  height: 36px;
+  color: var(--white);
+  
+  background: var(--blue);
+  border-radius: 20px;
 
-.poke-container {
-  position: relative;
-  display: flex;
-  margin: auto;
-  width: 70%;
-  height: 25vh;
-  background: var(--light-grey);
-  border-radius: 9px;
-  padding: 15px;
+  margin: 0 10px;
+  padding: 0 10px;
 }
-.poke-id {
-  /* color: var(--light-blue); */
-  font-weight: 400;
-  top: 0;
+.inline-button {
+  display: inline-flex;
 }
-.poke-img-container {
-  position: relative;
+.button > * {
+  margin: 0 5px;
+}
+.button > span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 26px;
   display: flex;
+  align-items: center;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+  
+  color: #FFFFFF;
+}
+.test {
+  display: inline-flex;
+  background-color: blueviolet;
+  border-radius: 10px;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
-}
-.poke-img { 
-  position: absolute;
-  height: 120px;
-  /* height: 265px; */
-}
-.poke-name {
-  /* color: var(--light-blue); */
-  /* height: 33px; */
-  font-size: 22px;
-  font-weight: 400;
-  margin: 0.5em auto;
-}
-.types-container {
-  margin: 0 auto;
-}
-.poke-type {
-  width: 100px;
-  height: 35px;
-  border-radius: 6px;
-  padding: 2px 8px;
-  margin: 0 5px;
-  color: var(--main-bg-color);
-  font-weight: 400;
-}
-.side-border {
-  align-self: center;
-  height: 80%;
-  width: 1px;
-  background-color: #D7D7D7;
-  margin: 0 1em;
-}
-.description {
-  width: 70%;
-}
-.stats-container {
-  flex-direction: column;
-  flex-wrap: wrap;
-  display: flex;
-  height: 3.5em;
 }
