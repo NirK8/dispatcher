@@ -17,7 +17,7 @@
   --light-grey: #D9DBE9;
   --blue: #0058B9;
   --light-purple: #5A5A89;
-  --light-opaque-purple: #5A5A89 50%;
+  --light-opaque-purple: rgba(90, 90, 137, 0.5);
   --dark-purple: #262146;
   --black: #14142B;
   --white: #FFFFFF;
@@ -39,6 +39,46 @@ body {
   font-family: 'Roboto', sans-serif;
   color: var(--light-purple);
 }
+.page-content {
+  display: flex;
+  margin: auto;
+  width: 80%;
+}
+.cards-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.card {
+  display: flex;
+  background: var(--white);
+  border: 1px solid var(--light-grey);
+  box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  margin: 30px 0px;
+}
+.widget {
+  width: 30%;
+}
+.card-image {
+  width: 244px;
+  height: 244px;
+  /* width: 25%; */
+  border-radius: 20px 0px 0px 20px;
+}
+.card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.date-and-tags {
+  display: flex;
+  justify-content: space-between;
+}
+.date {
+  color: var(--light-opaque-purple);
+}
 .tag {
   display: inline-flex;
   width: 57px;
@@ -48,6 +88,28 @@ body {
   background-color: var(--light-pink);
   font-family: 'Poppins', sans-serif;
   color: var(--light-purple);
+}
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 60%;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--black);
+  margin: 10px 0;
+}
+.author-and-source {
+  color: var(--light-opaque-purple);
+  margin: 10px 0;
+}
+.content {
+  
+  margin: 10px 0;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end;
 }
 .button {
   display: flex;

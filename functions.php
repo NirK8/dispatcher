@@ -29,6 +29,9 @@ function console_log($output, $with_script_tags = true) {
   }
   echo $js_code;
 }
+function print_article_card($article) {
+  get_template_part('partials/card', null, array($article));
+}
 function print_options($option){
   $option = ucfirst($option);
   ?>    
