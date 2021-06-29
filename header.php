@@ -7,7 +7,7 @@
 <body>
   <header>
       <a href="/dispatcher">
-        <img class="logo" src="<?php echo get_template_directory_uri() . "/img/logo.png" ?>"/>
+        <img class="logo" src="<?php echo get_template_directory_uri() . "/images/logo.png" ?>"/>
       </a>
       <div class="header-options">
         <?php 
