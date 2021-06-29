@@ -10,7 +10,7 @@ if($args[0]) {
   $url = $args[1];
   $additional_class = $args[2] ? 'inline-button' : 'block-button';
   ?>
-    <a href="<?php echo $url?>" target="_blank">
+    <a href="<?php echo $url?>" target="_blank" style="text-decoration:none">
       <div class="button <?php echo $additional_class?>">
         <span><?php echo $value ?></span>
         <?php 
