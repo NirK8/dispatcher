@@ -32,10 +32,11 @@ function console_log($output, $with_script_tags = true) {
 function print_article_card($article) {
   get_template_part('partials/card', null, array($article));
 }
-function print_options($option){
-  $option = ucfirst($option);
+function print_option($option){
+  $name = ucfirst($option[0]);
+  $value = $option[1];
   ?>    
-  <option value="<?php echo $option ?>"><?php echo $option ?></option>
+  <option value="<?php echo $value ?>"><?php echo $name ?></option>
   <?php
 }
 ?>

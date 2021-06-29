@@ -12,9 +12,12 @@ if($args[0]) {
   $image = $article->urlToImage;
   $author = $article->author;
   $source = $article->source->name;
+  $url = $article->url;
   ?>
     <div class="card">
-      <img class="card-image" src="<?php echo $image?>" alt="article"></img>
+      <div class="image-container">
+        <img class="card-image" src="<?php echo $image?>" alt="article"></img>
+      </div>
       <div class="card-content">
         <!-- date + tags -->
         <div class="date-and-tags">
@@ -39,7 +42,7 @@ if($args[0]) {
         
         <!-- button -->
         <div class="button-container">
-          <?php get_template_part('partials/button', null, array('navigate to dispatch', true, true))?>
+          <?php get_template_part('partials/button', null, array('navigate to dispatch', $url, true, true))?>
         </div> 
       </div>
     </div>
