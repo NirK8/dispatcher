@@ -11,9 +11,9 @@
       </a>
 
       <div class="search-container">
-        <span class="search-icon-container"></span>
+        <span class="search-icon-container"><?php get_template_part('partials/icon', 'null', array('search.png'))?></span>
         <input placeholder="Search">
-        <div>Everything</div>
+        <?php get_template_part('partials/select', null, array(array(array('Everything', 'everything'), array('Top Headlines', 'top headlines')), false)) ?>
       </div>
       
       <div class="header-options">

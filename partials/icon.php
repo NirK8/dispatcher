@@ -1,4 +1,6 @@
 <?php 
+// arguments:
+// path:string - path to the icon file
 $icon_path = $args[0];
 ?>
 
