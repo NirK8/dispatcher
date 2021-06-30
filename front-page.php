@@ -16,6 +16,8 @@
     get_template_part('partials/select', null, array('Category', array(array('all', null), array('business', 'business'), array('entertainment', 'entertainment'), array('general', 'general'))));
     get_template_part('partials/select', null, array('Sources', array(array('all', null), array('techcrunch', 'techcrunch.com'), array('thenextweb', 'thenextweb.com'))));
     get_template_part('partials/select', null, array('Results per page', array(array('10', 10), array('20', 20), array('50', 50), array('100', 100))));
+    // get_template_part('partials/input', null, array('search'));
+    
     ?>
   </div>
   <div class="page-content">
