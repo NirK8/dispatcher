@@ -40,4 +40,19 @@ function print_option($option){
   <option value="<?php echo $value ?>"><?php echo $name ?></option>
   <?php
 }
+function cut_text($text, $limit) {
+  if (strlen($text) > $limit) {
+    for ($i = $limit; $i > 0; $i--) {
+      if (
+        $text[$i] === " " &&
+        ($text[$i-1] !== "," ||
+          $text[$i-1] != "." ||
+          $text[$i-1] !== ";")
+      ) {
+        return substr($text, 0, $i) . "...";
+      }
+    }
+    return substr($text, 0, $limit) . "...";
+  } else return $text;
+}
 ?>

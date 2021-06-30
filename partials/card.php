@@ -30,7 +30,7 @@ if($args[0]) {
         </div> 
 
         <!-- title -->
-        <div class="title"><?php echo $title?></div> 
+        <div class="title"><?php echo cut_text($title, 120)?></div> 
         
         <!-- author + source -->
         <div class="author-and-source">
@@ -38,7 +38,7 @@ if($args[0]) {
         </div> 
         
         <!-- content -->
-        <div class="content"><?php echo $content ?></div> 
+        <div class="content"><?php echo cut_text($content, 155) ?></div> 
         
         <!-- button -->
         <div class="button-container">
