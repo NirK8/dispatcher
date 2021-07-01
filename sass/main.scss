@@ -1,0 +1,89 @@
+/*
+    Theme Name: Dispatcher
+    Theme URI: 
+    Author: Nir Kahana
+    Author URI: 
+    Description: Theme for the dispatcher
+    Version: 1.0
+    License: GNU Public License v2 or later
+    License URI: http://www.gnu.org/licenses/glp-2.0.html
+    Tags: pokemon, mobile first, responsive, dispatcher
+    Text Domain: dispatcher
+*/
+
+@import "compass";
+@import "compass/reset";
+
+@import "./utils/variables.scss";
+
+@import "./components/header.scss";
+@import "./components/card.scss";
+@import "./components/widget.scss";
+@import "./components/select.scss";
+
+// @import "colors.scss";
+
+
+
+
+
+body {
+  margin: 0;
+  background: $main-bg-color;
+  font-family: 'Roboto', sans-serif;
+  color: $primary-light;
+  font-size: 0.8750em;
+  line-height: 1em;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $primary-opaque;
+}
+.page-content-wrapper {
+  width: 80%;
+  margin: auto;
+  .filters {
+    margin: 10px 0;
+  }
+  .page-content {
+    display: grid;
+    grid-template-columns: 28fr 12fr 1fr;
+    grid-column-gap: 15px;
+    margin: auto;
+    border-top: 1px solid $secondary-opaque;
+    .cards-container {
+      display: flex;
+      flex-direction: column;
+      .card-expanded {
+        height: auto;
+      }
+    }
+  }
+}
+
+.inline-button {
+  display: inline-flex;
+}
+.block-button {
+  width: 100%;
+}
+.button > * {
+  margin: 0 5px;
+}
+.button > span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1.625em;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+  
+  color: #FFFFFF;
+}
+
+
+.icon {
+  cursor: pointer;
+}

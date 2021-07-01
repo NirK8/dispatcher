@@ -13,7 +13,7 @@
       <div class="search-container">
         <span class="search-icon-container"><?php get_template_part('partials/icon', 'null', array('search.png', 'search-icon'))?></span>
         <input id="search" placeholder="Search">
-        <?php get_template_part('partials/select', null, array(array(array('Everything', 'everything'), array('Top Headlines', 'top headlines')), false)) ?>
+        <?php get_template_part('partials/select', null, array(array(array('Everything', 'everything'), array('Top Headlines', 'top headlines')), false, false, true)) ?>
       </div>
       
       <div class="header-options">

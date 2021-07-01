@@ -1,0 +1,29 @@
+.select-container {
+  display: inline-flex;
+  background-color: $white;
+  border-radius: 10px;
+  padding: 0 15px;
+}
+.left-border {
+  border-left: 1px solid $secondary-dark;
+  border-radius: 0 10px 10px 0;
+}
+.select {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $white;
+  padding: 15px 0;
+  width: 145px;
+  cursor: pointer;
+  font-size: 0.875em;
+  line-height: 22px;
+  border: none;
+  outline-width: 0;
+}
+.squared-select {
+  padding: 0;
+  height: 40px;
+  border-radius: 0 10px 10px 0;
+}

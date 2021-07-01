@@ -75,35 +75,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 17, sass/style.scss */
-:root {
-  --main-bg-color: #F8F8FF;
-  --light-pink: #F3F3FF;
-  --grey: #D9DBE9;
-  --light-opaque-grey: rgba(217, 219, 233, 0.5);
-  --opaque-grey: rgba(217, 219, 233, 0.8);
-  --blue: #0058B9;
-  --light-purple: #5A5A89;
-  --light-opaque-purple: rgba(90, 90, 137, 0.5);
-  --dark-purple: #262146;
-  --black: #14142B;
-  --white: #FFFFFF;
-}
-
-/* line 31, sass/style.scss */
+/* line 1, sass/components/header.scss */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 74px;
   padding: 0 20px;
-  background-color: var(--dark-purple);
+  background-color: #262146;
 }
-/* line 38, sass/style.scss */
+/* line 8, sass/components/header.scss */
 header .logo {
   height: 50px;
 }
-/* line 41, sass/style.scss */
+/* line 11, sass/components/header.scss */
 header .search-container {
   display: flex;
   align-items: center;
@@ -112,7 +97,7 @@ header .search-container {
   width: 423px;
   height: 50px;
 }
-/* line 48, sass/style.scss */
+/* line 18, sass/components/header.scss */
 header .search-container > span {
   display: flex;
   align-items: center;
@@ -120,7 +105,7 @@ header .search-container > span {
   width: 24px;
   margin: auto 15px;
 }
-/* line 55, sass/style.scss */
+/* line 25, sass/components/header.scss */
 header .search-container > input {
   display: flex;
   flex-direction: row;
@@ -130,25 +115,25 @@ header .search-container > input {
   border: none;
   outline-width: 0;
 }
-/* line 65, sass/style.scss */
+/* line 35, sass/components/header.scss */
 header .search-container > .squared-select {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 140px;
   height: 40px;
-  border-left: 1px solid var(--grey);
+  border-left: 1px solid #D9DBE9;
 }
-/* line 75, sass/style.scss */
+/* line 45, sass/components/header.scss */
 header .header-options {
   display: flex;
   align-items: center;
 }
-/* line 79, sass/style.scss */
+/* line 49, sass/components/header.scss */
 header .header-options > * {
   margin-left: 10px;
 }
-/* line 82, sass/style.scss */
+/* line 52, sass/components/header.scss */
 header .user-avatar {
   display: inline-flex;
   flex-direction: column;
@@ -157,110 +142,73 @@ header .user-avatar {
   width: 50px;
   height: 50px;
   border-radius: 30px;
-  background-color: var(--blue);
-  color: var(--white);
+  background-color: #0058B9;
+  color: #FFFFFF;
   cursor: pointer;
 }
 
-/* line 97, sass/style.scss */
-body {
-  margin: 0;
-  background: var(--main-bg-color);
-  font-family: 'Roboto', sans-serif;
-  color: var(--light-purple);
-  font-size: 14px;
-}
-
-/* line 105, sass/style.scss */
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: var(--light-opaque-purple);
-}
-
-/* line 108, sass/style.scss */
-.page-content-wrapper {
-  width: 80%;
-  margin: auto;
-}
-/* line 111, sass/style.scss */
-.page-content-wrapper .filters {
-  margin: 10px 0;
-}
-/* line 114, sass/style.scss */
-.page-content-wrapper .page-content {
+/* line 1, sass/components/card.scss */
+.card {
   display: flex;
-  margin: auto;
-  /* width: 80%; */
-  border-top: 1px solid var(--light-opaque-grey);
-}
-/* line 119, sass/style.scss */
-.page-content-wrapper .page-content .cards-container {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-}
-/* line 123, sass/style.scss */
-.page-content-wrapper .page-content .cards-container .card {
-  display: flex;
-  background: var(--white);
-  border: 1px solid var(--grey);
+  background: #FFFFFF;
+  border: 1px solid #D9DBE9;
   box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.05);
   border-radius: 20px;
   margin: 30px 0px;
   height: 242px;
 }
-/* line 131, sass/style.scss */
-.page-content-wrapper .page-content .cards-container .card .image-container {
+/* line 9, sass/components/card.scss */
+.card .image-container {
   display: flex;
   align-items: center;
   border-radius: 20px 0px 0px 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
-/* line 136, sass/style.scss */
-.page-content-wrapper .page-content .cards-container .card .image-container .card-image {
+/* line 14, sass/components/card.scss */
+.card .image-container .card-image {
   width: 242px;
   height: 100%;
   border-radius: 20px 0px 0px 20px;
   object-fit: cover;
 }
-/* line 143, sass/style.scss */
-.page-content-wrapper .page-content .cards-container .card .card-content {
+/* line 21, sass/components/card.scss */
+.card .card-content {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 17px;
   max-height: 100%;
   overflow-y: scroll;
 }
-/* line 150, sass/style.scss */
-.page-content-wrapper .page-content .cards-container .card .card-content .date-and-tags {
+/* line 28, sass/components/card.scss */
+.card .card-content .date-and-tags {
   display: flex;
   justify-content: space-between;
   max-height: 28px;
 }
-/* line 154, sass/style.scss */
-.page-content-wrapper .page-content .cards-container .card .card-content .date-and-tags .date {
-  color: var(--light-opaque-purple);
+/* line 32, sass/components/card.scss */
+.card .card-content .date-and-tags .date {
+  color: rgba(90, 90, 137, 0.5);
 }
-/* line 157, sass/style.scss */
-.page-content-wrapper .page-content .cards-container .card .card-content .date-and-tags .tag {
+/* line 35, sass/components/card.scss */
+.card .card-content .date-and-tags .tag {
   display: inline-flex;
   justify-content: center;
   width: 57px;
   padding: 3px 10px;
   border-radius: 10px;
   margin: 0px 10px;
-  background-color: var(--light-pink);
+  background-color: #F3F3FF;
   font-family: 'Poppins', sans-serif;
-  color: var(--light-purple);
+  color: #5A5A89;
   cursor: pointer;
 }
-/* line 169, sass/style.scss */
-.page-content-wrapper .page-content .cards-container .card .card-content .date-and-tags .tag:hover {
-  background-color: var(--opaque-grey);
+/* line 46, sass/components/card.scss */
+.card .card-content .date-and-tags .tag:hover {
+  background-color: rgba(217, 219, 233, 0.8);
 }
-/* line 173, sass/style.scss */
-.page-content-wrapper .page-content .cards-container .card .card-content .title {
+/* line 51, sass/components/card.scss */
+.card .card-content .title {
   display: flex;
   flex-wrap: wrap;
   max-width: 80%;
@@ -268,67 +216,210 @@ body {
   font-weight: bold;
   font-size: 18px;
   line-height: 21px;
-  color: var(--black);
+  color: #14142B;
   margin: 10px 0;
 }
-/* line 184, sass/style.scss */
-.page-content-wrapper .page-content .cards-container .card .card-content .author-and-source {
-  color: var(--light-opaque-purple);
+/* line 62, sass/components/card.scss */
+.card .card-content .author-and-source {
+  color: rgba(90, 90, 137, 0.5);
   margin: 10px 0;
   line-height: 22px;
   max-height: 22px;
   letter-spacing: 0.25px;
 }
-/* line 191, sass/style.scss */
-.page-content-wrapper .page-content .cards-container .card .card-content .content {
-  line-height: 16px;
+/* line 69, sass/components/card.scss */
+.card .card-content .content {
   max-height: 48px;
-  overflow-y: hidden;
   margin: 10px 0;
 }
-/* line 197, sass/style.scss */
-.page-content-wrapper .page-content .cards-container .card .card-content .button-container {
+/* line 73, sass/components/card.scss */
+.card .card-content .content-expanded {
+  line-height: 16px;
+  margin: 10px 0;
+}
+/* line 77, sass/components/card.scss */
+.card .card-content .button-container {
   display: flex;
   justify-content: flex-end;
 }
-/* line 200, sass/style.scss */
-.page-content-wrapper .page-content .cards-container .card .card-content .button-container .button {
+/* line 80, sass/components/card.scss */
+.card .card-content .button-container .button {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   height: 36px;
-  color: var(--white);
-  background: var(--blue);
+  color: #FFFFFF;
+  background: #0058B9;
   border-radius: 20px;
   margin: 0 10px;
   padding: 0 12.5px;
 }
-/* line 214, sass/style.scss */
-.page-content-wrapper .page-content .cards-container .card .card-content .button-container .button:hover {
+/* line 93, sass/components/card.scss */
+.card .card-content .button-container .button:hover {
   opacity: 0.8;
   cursor: pointer;
 }
-/* line 222, sass/style.scss */
-.page-content-wrapper .page-content .widget {
-  width: 30%;
+
+/* line 2, sass/components/widget.scss */
+.widget-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-/* line 228, sass/style.scss */
+/* line 8, sass/components/widget.scss */
+.widget {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  border: 1px solid #D9DBE9;
+  padding: 25px 15px 25px 25px;
+  margin: 30px 0;
+}
+
+/* line 19, sass/components/widget.scss */
+.pb-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+/* line 26, sass/components/widget.scss */
+.pb-name {
+  margin: 0 10px;
+}
+
+/* line 29, sass/components/widget.scss */
+.pb-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 10px;
+}
+
+/* line 35, sass/components/widget.scss */
+.pb-percentage {
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0 10px;
+}
+
+/* line 40, sass/components/widget.scss */
+.pb-bar {
+  width: 190px;
+  height: 12px;
+  background: #F3F3FF;
+  border-radius: 6px;
+}
+
+/* line 46, sass/components/widget.scss */
+.pb-bar > div {
+  background-color: #0058B9;
+  border-radius: 6px;
+  height: 12px;
+}
+
+/* line 1, sass/components/select.scss */
+.select-container {
+  display: inline-flex;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 0 15px;
+}
+
+/* line 7, sass/components/select.scss */
+.left-border {
+  border-left: 1px solid #D9DBE9;
+  border-radius: 0 10px 10px 0;
+}
+
+/* line 11, sass/components/select.scss */
+.select {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 15px 0;
+  width: 145px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 22px;
+  border: none;
+  outline-width: 0;
+}
+
+/* line 25, sass/components/select.scss */
+.squared-select {
+  padding: 0;
+  height: 40px;
+  border-radius: 0 10px 10px 0;
+}
+
+/* line 30, sass/main.scss */
+body {
+  margin: 0;
+  background: #F8F8FF;
+  font-family: 'Roboto', sans-serif;
+  color: #5A5A89;
+  font-size: 0.8750em;
+  line-height: 1em;
+}
+
+/* line 39, sass/main.scss */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(90, 90, 137, 0.5);
+}
+
+/* line 42, sass/main.scss */
+.page-content-wrapper {
+  width: 80%;
+  margin: auto;
+}
+/* line 45, sass/main.scss */
+.page-content-wrapper .filters {
+  margin: 10px 0;
+}
+/* line 48, sass/main.scss */
+.page-content-wrapper .page-content {
+  display: grid;
+  grid-template-columns: 28fr 12fr 1fr;
+  grid-column-gap: 15px;
+  margin: auto;
+  border-top: 1px solid rgba(217, 219, 233, 0.5);
+}
+/* line 54, sass/main.scss */
+.page-content-wrapper .page-content .cards-container {
+  display: flex;
+  flex-direction: column;
+}
+/* line 57, sass/main.scss */
+.page-content-wrapper .page-content .cards-container .card-expanded {
+  height: auto;
+}
+
+/* line 64, sass/main.scss */
 .inline-button {
   display: inline-flex;
 }
 
-/* line 231, sass/style.scss */
+/* line 67, sass/main.scss */
 .block-button {
   width: 100%;
 }
 
-/* line 234, sass/style.scss */
+/* line 70, sass/main.scss */
 .button > * {
   margin: 0 5px;
 }
 
-/* line 237, sass/style.scss */
+/* line 73, sass/main.scss */
 .button > span {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -341,90 +432,7 @@ body {
   color: #FFFFFF;
 }
 
-/* line 249, sass/style.scss */
-.select-container {
-  display: inline-flex;
-  background-color: var(--white);
-  padding: 0 15px;
-  border-radius: 10px;
-}
-
-/* line 256, sass/style.scss */
-.select-container {
-  display: inline-flex;
-  background-color: var(--white);
-  padding: 0 15px;
-  border-radius: 10px;
-}
-
-/* line 262, sass/style.scss */
-.select {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--white);
-  padding: 15px 0;
-  width: 145px;
-  cursor: pointer;
-  font-size: 14px;
-  line-height: 22px;
-  border: none;
-  outline-width: 0;
-}
-
-/* line 276, sass/style.scss */
-.squared-select {
-  padding: 0;
-  height: 40px;
-  border-radius: 0 10px 10px 0;
-}
-
-/* line 282, sass/style.scss */
-.pb-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0px;
-}
-
-/* line 289, sass/style.scss */
-.pb-name {
-  margin: 0 10px;
-}
-
-/* line 292, sass/style.scss */
-.pb-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0px 10px;
-}
-
-/* line 298, sass/style.scss */
-.pb-percentage {
-  font-size: 14px;
-  line-height: 16px;
-  margin: 0 10px;
-}
-
-/* line 303, sass/style.scss */
-.pb-bar {
-  width: 190px;
-  height: 12px;
-  background: var(--light-pink);
-  border-radius: 6px;
-}
-
-/* line 309, sass/style.scss */
-.pb-bar > div {
-  background-color: var(--blue);
-  border-radius: 6px;
-  height: 12px;
-}
-
-/* line 314, sass/style.scss */
+/* line 87, sass/main.scss */
 .icon {
   cursor: pointer;
 }

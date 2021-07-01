@@ -1,5 +1,5 @@
 <?php
-// Arguments for the button.php template:
+// Arguments for the card.php template:
 // article:object - the article to display
 // tags:string[] - tags that are related to the article
 
@@ -14,7 +14,8 @@ if($args[0]) {
   $source = $article->source->name;
   $url = $article->url;
   ?>
-    <div class="card">
+    <div class="card card-expanded">
+    <!-- <div class="card"> -->
       <div class="image-container">
         <img class="card-image" src="<?php echo $image?>" alt="article"></img>
       </div>
@@ -38,12 +39,13 @@ if($args[0]) {
         </div> 
         
         <!-- content -->
+        <!-- <div class="content-expanded"><?php echo $content ?></div>  -->
         <div class="content"><?php echo cut_text($content, 155) ?></div> 
         
         <!-- button -->
         <div class="button-container">
           <?php get_template_part('partials/button', null, array('navigate to dispatch', $url, true, true))?>
-        </div> 
+        </div>
       </div>
     </div>
   <?php
