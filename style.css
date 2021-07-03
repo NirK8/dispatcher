@@ -154,24 +154,24 @@ header .user-avatar {
   border: 1px solid #D9DBE9;
   box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.05);
   border-radius: 20px;
-  margin: 30px 0px;
+  margin-bottom: 30px;
   height: 242px;
 }
-/* line 9, sass/components/card.scss */
+/* line 10, sass/components/card.scss */
 .card .image-container {
   display: flex;
   align-items: center;
   border-radius: 20px 0px 0px 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
-/* line 14, sass/components/card.scss */
+/* line 15, sass/components/card.scss */
 .card .image-container .card-image {
   width: 242px;
   height: 100%;
   border-radius: 20px 0px 0px 20px;
   object-fit: cover;
 }
-/* line 21, sass/components/card.scss */
+/* line 22, sass/components/card.scss */
 .card .card-content {
   flex-grow: 1;
   display: flex;
@@ -180,18 +180,18 @@ header .user-avatar {
   max-height: 100%;
   overflow-y: scroll;
 }
-/* line 28, sass/components/card.scss */
-.card .card-content .date-and-tags {
+/* line 29, sass/components/card.scss */
+.card .card-content .date-and-chips {
   display: flex;
   justify-content: space-between;
   max-height: 28px;
 }
-/* line 32, sass/components/card.scss */
-.card .card-content .date-and-tags .date {
+/* line 33, sass/components/card.scss */
+.card .card-content .date-and-chips .date {
   color: rgba(90, 90, 137, 0.5);
 }
-/* line 35, sass/components/card.scss */
-.card .card-content .date-and-tags .tag {
+/* line 36, sass/components/card.scss */
+.card .card-content .date-and-chips .chip {
   display: inline-flex;
   justify-content: center;
   width: 57px;
@@ -203,23 +203,23 @@ header .user-avatar {
   color: #5A5A89;
   cursor: pointer;
 }
-/* line 46, sass/components/card.scss */
-.card .card-content .date-and-tags .tag:hover {
+/* line 47, sass/components/card.scss */
+.card .card-content .date-and-chips .chip:hover {
   background-color: rgba(217, 219, 233, 0.8);
 }
-/* line 51, sass/components/card.scss */
+/* line 52, sass/components/card.scss */
 .card .card-content .title {
   display: flex;
   flex-wrap: wrap;
   max-width: 80%;
   max-height: 42px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.125em;
   line-height: 21px;
   color: #14142B;
   margin: 10px 0;
 }
-/* line 62, sass/components/card.scss */
+/* line 63, sass/components/card.scss */
 .card .card-content .author-and-source {
   color: rgba(90, 90, 137, 0.5);
   margin: 10px 0;
@@ -227,22 +227,22 @@ header .user-avatar {
   max-height: 22px;
   letter-spacing: 0.25px;
 }
-/* line 69, sass/components/card.scss */
+/* line 70, sass/components/card.scss */
 .card .card-content .content {
   max-height: 48px;
   margin: 10px 0;
 }
-/* line 73, sass/components/card.scss */
+/* line 74, sass/components/card.scss */
 .card .card-content .content-expanded {
   line-height: 16px;
   margin: 10px 0;
 }
-/* line 77, sass/components/card.scss */
+/* line 78, sass/components/card.scss */
 .card .card-content .button-container {
   display: flex;
   justify-content: flex-end;
 }
-/* line 80, sass/components/card.scss */
+/* line 81, sass/components/card.scss */
 .card .card-content .button-container .button {
   display: flex;
   align-items: center;
@@ -254,21 +254,19 @@ header .user-avatar {
   margin: 0 10px;
   padding: 0 12.5px;
 }
-/* line 93, sass/components/card.scss */
+/* line 94, sass/components/card.scss */
 .card .card-content .button-container .button:hover {
   opacity: 0.8;
   cursor: pointer;
 }
 
 /* line 2, sass/components/widget.scss */
-.widget-container {
+.widgets-column {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
 }
 
-/* line 8, sass/components/widget.scss */
+/* line 7, sass/components/widget.scss */
 .widget {
   display: flex;
   flex-direction: column;
@@ -276,49 +274,56 @@ header .user-avatar {
   box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.05);
   border-radius: 20px;
   border: 1px solid #D9DBE9;
-  padding: 25px 15px 25px 25px;
-  margin: 30px 0;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+/* line 17, sass/components/widget.scss */
+.widget .title {
+  font-size: 1.5em;
+  line-height: 2em;
+  font-weight: bold;
+  color: #14142B;
 }
 
-/* line 19, sass/components/widget.scss */
-.pb-container {
+/* line 24, sass/components/widget.scss */
+.pie {
+  height: 275px;
+}
+
+/* line 27, sass/components/widget.scss */
+.tag-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 10px 0px;
 }
-
-/* line 26, sass/components/widget.scss */
-.pb-name {
+/* line 33, sass/components/widget.scss */
+.tag-container .tag-name {
   margin: 0 10px;
 }
-
-/* line 29, sass/components/widget.scss */
-.pb-wrapper {
+/* line 36, sass/components/widget.scss */
+.tag-container .pb-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0px 10px;
 }
-
-/* line 35, sass/components/widget.scss */
-.pb-percentage {
-  font-size: 14px;
+/* line 41, sass/components/widget.scss */
+.tag-container .pb-container .pb-percentage {
+  font-size: 0.875em;
   line-height: 16px;
   margin: 0 10px;
 }
-
-/* line 40, sass/components/widget.scss */
-.pb-bar {
+/* line 46, sass/components/widget.scss */
+.tag-container .pb-container .pb-bar {
   width: 190px;
   height: 12px;
   background: #F3F3FF;
   border-radius: 6px;
 }
-
-/* line 46, sass/components/widget.scss */
-.pb-bar > div {
+/* line 51, sass/components/widget.scss */
+.tag-container .pb-container .pb-bar div {
   background-color: #0058B9;
   border-radius: 6px;
   height: 12px;
@@ -332,13 +337,18 @@ header .user-avatar {
   padding: 0 15px;
 }
 
-/* line 7, sass/components/select.scss */
+/* line 8, sass/components/select.scss */
 .left-border {
   border-left: 1px solid #D9DBE9;
   border-radius: 0 10px 10px 0;
 }
 
-/* line 11, sass/components/select.scss */
+/* line 12, sass/components/select.scss */
+.right-margin {
+  margin-right: 20px;
+}
+
+/* line 15, sass/components/select.scss */
 .select {
   display: inline-flex;
   flex-direction: row;
@@ -348,20 +358,20 @@ header .user-avatar {
   padding: 15px 0;
   width: 145px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.875em;
   line-height: 22px;
   border: none;
   outline-width: 0;
 }
 
-/* line 25, sass/components/select.scss */
+/* line 29, sass/components/select.scss */
 .squared-select {
   padding: 0;
   height: 40px;
   border-radius: 0 10px 10px 0;
 }
 
-/* line 30, sass/main.scss */
+/* line 27, sass/style.scss */
 body {
   margin: 0;
   background: #F8F8FF;
@@ -371,60 +381,61 @@ body {
   line-height: 1em;
 }
 
-/* line 39, sass/main.scss */
+/* line 36, sass/style.scss */
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgba(90, 90, 137, 0.5);
 }
 
-/* line 42, sass/main.scss */
+/* line 39, sass/style.scss */
 .page-content-wrapper {
   width: 80%;
   margin: auto;
 }
-/* line 45, sass/main.scss */
+/* line 42, sass/style.scss */
 .page-content-wrapper .filters {
   margin: 10px 0;
 }
-/* line 48, sass/main.scss */
+/* line 45, sass/style.scss */
 .page-content-wrapper .page-content {
   display: grid;
   grid-template-columns: 28fr 12fr 1fr;
   grid-column-gap: 15px;
   margin: auto;
   border-top: 1px solid rgba(217, 219, 233, 0.5);
+  padding-top: 20px;
 }
-/* line 54, sass/main.scss */
+/* line 52, sass/style.scss */
 .page-content-wrapper .page-content .cards-container {
   display: flex;
   flex-direction: column;
 }
-/* line 57, sass/main.scss */
+/* line 55, sass/style.scss */
 .page-content-wrapper .page-content .cards-container .card-expanded {
   height: auto;
 }
 
-/* line 64, sass/main.scss */
+/* line 62, sass/style.scss */
 .inline-button {
   display: inline-flex;
 }
 
-/* line 67, sass/main.scss */
+/* line 65, sass/style.scss */
 .block-button {
   width: 100%;
 }
 
-/* line 70, sass/main.scss */
+/* line 68, sass/style.scss */
 .button > * {
   margin: 0 5px;
 }
 
-/* line 73, sass/main.scss */
+/* line 71, sass/style.scss */
 .button > span {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 26px;
+  font-size: 1em;
+  line-height: 1.625em;
   display: flex;
   align-items: center;
   letter-spacing: 0.25px;
@@ -432,7 +443,7 @@ body {
   color: #FFFFFF;
 }
 
-/* line 87, sass/main.scss */
+/* line 85, sass/style.scss */
 .icon {
   cursor: pointer;
 }

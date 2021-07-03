@@ -2,7 +2,7 @@
 function dispatcher_styles() {
   // adding stylesheets
   wp_register_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '6.0.0');
-  wp_register_style('style', get_template_directory_uri() . '/main.css', array('normalize'), '1.0');
+  wp_register_style('style', get_template_directory_uri() . '/style.css', array('normalize'), '1.0');
 
   // Enqueue the style
   wp_enqueue_style('normalize');
@@ -54,5 +54,13 @@ function cut_text($text, $limit) {
     }
     return substr($text, 0, $limit) . "...";
   } else return $text;
+}
+function print_tag($tag) {
+  get_template_part('partials/tag', null, $tag);
+}
+function echo_source($source) {
+  $name = $source[0];
+  $percent = $source[1];
+  return "['".$name."', ".$percent."], ";
 }
 ?>

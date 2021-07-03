@@ -4,14 +4,16 @@
   // rounded:boolean - if true, the select's shape will be rounded. defaults to true.
   // name:string - name for the select input
   // withBorder:boolean - if true, the select input will have a left-border. defautls to false
+  // withMargin: boolean - if true, the select input will have a right-margin. defaults to false.
 
 if($args[0]) {
   $options = $args[0];
   $additional_class = $args[1] ? null : 'squared-select';
   $name = $args[2] ?: null;
   $border_class = $args[3] ? 'left-border' : null;
+  $margin_class = $args[4] ? 'right-margin' : null;
   ?>
-    <div class="select-container <?php echo $border_class ?>"> 
+    <div class="select-container <?php echo $border_class ?> <?php echo $margin_class ?>"> 
       <select class="select <?php echo $additional_class ?>" name="<?php echo $name ?>">
       <?php if($name) { ?>
         <option value="" disabled selected hidden><?php echo $name?></option>

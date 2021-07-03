@@ -20,13 +20,13 @@ if($args[0]) {
         <img class="card-image" src="<?php echo $image?>" alt="article"></img>
       </div>
       <div class="card-content">
-        <!-- date + tags -->
-        <div class="date-and-tags">
+        <!-- date + chips -->
+        <div class="date-and-chips">
           <div class="date">
             <?php echo $formatted_date ?>
           </div>
           <div>
-            <?php get_template_part('partials/tag', null, array('crypto'))?>
+            <?php get_template_part('partials/chip', null, array('crypto'))?>
           </div>
         </div> 
 

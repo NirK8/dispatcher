@@ -24,9 +24,6 @@
 // @import "colors.scss";
 
 
-
-
-
 body {
   margin: 0;
   background: $main-bg-color;
@@ -51,6 +48,7 @@ body {
     grid-column-gap: 15px;
     margin: auto;
     border-top: 1px solid $secondary-opaque;
+    padding-top: 20px;
     .cards-container {
       display: flex;
       flex-direction: column;

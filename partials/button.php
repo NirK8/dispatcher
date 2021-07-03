@@ -15,7 +15,7 @@ if($args[0]) {
         <span><?php echo $value ?></span>
         <?php 
         if($args[3]) {
-          get_template_part('partials/icon', null, array('arrow.png'));
+          get_template_part('partials/icon', null, array('arrow.svg'));
         }
         ?>
       </div>
