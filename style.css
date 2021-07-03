@@ -277,20 +277,33 @@ header .user-avatar {
   padding: 25px;
   margin-bottom: 30px;
 }
-/* line 17, sass/components/widget.scss */
-.widget .title {
+/* line 16, sass/components/widget.scss */
+.widget .widget-title {
   font-size: 1.5em;
   line-height: 2em;
   font-weight: bold;
   color: #14142B;
 }
+/* line 22, sass/components/widget.scss */
+.widget .underline {
+  width: 20px;
+  height: 5px;
+  border-radius: 30px;
+  background-color: #5A5A89;
+  margin-top: 8px;
+}
+/* line 29, sass/components/widget.scss */
+.widget .tags-container {
+  max-height: 300px;
+  overflow-y: scroll;
+}
 
-/* line 24, sass/components/widget.scss */
+/* line 35, sass/components/widget.scss */
 .pie {
   height: 275px;
 }
 
-/* line 27, sass/components/widget.scss */
+/* line 38, sass/components/widget.scss */
 .tag-container {
   display: flex;
   flex-direction: row;
@@ -298,31 +311,31 @@ header .user-avatar {
   align-items: center;
   padding: 10px 0px;
 }
-/* line 33, sass/components/widget.scss */
+/* line 44, sass/components/widget.scss */
 .tag-container .tag-name {
   margin: 0 10px;
 }
-/* line 36, sass/components/widget.scss */
+/* line 47, sass/components/widget.scss */
 .tag-container .pb-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0px 10px;
 }
-/* line 41, sass/components/widget.scss */
+/* line 52, sass/components/widget.scss */
 .tag-container .pb-container .pb-percentage {
   font-size: 0.875em;
   line-height: 16px;
   margin: 0 10px;
 }
-/* line 46, sass/components/widget.scss */
+/* line 57, sass/components/widget.scss */
 .tag-container .pb-container .pb-bar {
   width: 190px;
   height: 12px;
   background: #F3F3FF;
   border-radius: 6px;
 }
-/* line 51, sass/components/widget.scss */
+/* line 62, sass/components/widget.scss */
 .tag-container .pb-container .pb-bar div {
   background-color: #0058B9;
   border-radius: 6px;

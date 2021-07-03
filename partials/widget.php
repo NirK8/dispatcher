@@ -8,21 +8,23 @@ $title = $args[0];
 $type = $args[1];
 $pie_data = $args[2];
 $tags_data = $args[3];
-console_log($pie_data);
 ?>
 
 <div class="widget">
-  <div class="title">
+  <div class="widget-title">
     <?php echo ucfirst($title)?>
   </div>
-
-    
+  <div class="underline"></div>
     <?php 
       if($type === 'pie') {
         get_template_part('partials/pie-chart', null, $pie_data);
       }
       if($type === 'tags') {
-        array_map('print_tag', $tags_data);
+        ?>
+        <div class="tags-content">
+        <?php array_map('print_tag', $tags_data);?>
+        </div>
+        <?php
       }
-    ?>
+      ?>
 </div>
