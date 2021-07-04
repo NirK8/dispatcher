@@ -10,70 +10,453 @@
     Tags: pokemon, mobile first, responsive, dispatcher
     Text Domain: dispatcher
 */
-:root {
-  --main-bg-color: #F8F8FF;
-
-  --light-pink: #F3F3FF;
-  --light-grey: #D9DBE9;
-  --blue: #0058B9;
-  --light-purple: #5A5A89;
-  --light-opaque-purple: #5A5A89 50%;
-  --dark-purple: #262146;
-  --black: #14142B;
-  --white: #FFFFFF;
-}
-body {
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
-  background: var(--main-bg-color);
-  font-family: 'Roboto', sans-serif;
-  color: var(--light-blue);
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
-.tag {
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.6.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, sass/components/header.scss */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 74px;
+  padding: 0 20px;
+  background-color: #262146;
+}
+/* line 8, sass/components/header.scss */
+header .logo {
+  height: 50px;
+}
+/* line 11, sass/components/header.scss */
+header .search-container {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: #FFFFFF;
+  width: 423px;
+  height: 50px;
+}
+/* line 18, sass/components/header.scss */
+header .search-container > span {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+  margin: auto 15px;
+}
+/* line 25, sass/components/header.scss */
+header .search-container > input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 1;
+  background: #FFFFFF;
+  border: none;
+  outline-width: 0;
+}
+/* line 35, sass/components/header.scss */
+header .search-container > .squared-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 40px;
+  border-left: 1px solid #D9DBE9;
+}
+/* line 45, sass/components/header.scss */
+header .header-options {
+  display: flex;
+  align-items: center;
+}
+/* line 49, sass/components/header.scss */
+header .header-options > * {
+  margin-left: 10px;
+}
+/* line 52, sass/components/header.scss */
+header .user-avatar {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: #0058B9;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+/* line 1, sass/components/card.scss */
+.card {
+  display: flex;
+  background: #FFFFFF;
+  border: 1px solid #D9DBE9;
+  box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  margin-bottom: 30px;
+  height: 242px;
+}
+/* line 10, sass/components/card.scss */
+.card .image-container {
+  display: flex;
+  align-items: center;
+  border-radius: 20px 0px 0px 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+/* line 15, sass/components/card.scss */
+.card .image-container .card-image {
+  width: 242px;
+  height: 100%;
+  border-radius: 20px 0px 0px 20px;
+  object-fit: cover;
+}
+/* line 22, sass/components/card.scss */
+.card .card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 17px;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+/* line 29, sass/components/card.scss */
+.card .card-content .date-and-chips {
+  display: flex;
+  justify-content: space-between;
+  max-height: 28px;
+}
+/* line 33, sass/components/card.scss */
+.card .card-content .date-and-chips .date {
+  color: rgba(90, 90, 137, 0.5);
+}
+/* line 36, sass/components/card.scss */
+.card .card-content .date-and-chips .chip {
+  display: inline-flex;
+  justify-content: center;
   width: 57px;
   padding: 3px 10px;
   border-radius: 10px;
   margin: 0px 10px;
-  background-color: var(--light-pink);
+  background-color: #F3F3FF;
   font-family: 'Poppins', sans-serif;
-  color: var(--light-purple);
+  color: #5A5A89;
+  cursor: pointer;
 }
-.button {
+/* line 47, sass/components/card.scss */
+.card .card-content .date-and-chips .chip:hover {
+  background-color: rgba(217, 219, 233, 0.8);
+}
+/* line 52, sass/components/card.scss */
+.card .card-content .title {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80%;
+  max-height: 42px;
+  font-weight: bold;
+  font-size: 1.125em;
+  line-height: 21px;
+  color: #14142B;
+  margin: 10px 0;
+}
+/* line 63, sass/components/card.scss */
+.card .card-content .author-and-source {
+  color: rgba(90, 90, 137, 0.5);
+  margin: 10px 0;
+  line-height: 22px;
+  max-height: 22px;
+  letter-spacing: 0.25px;
+}
+/* line 70, sass/components/card.scss */
+.card .card-content .content {
+  max-height: 48px;
+  margin: 10px 0;
+}
+/* line 74, sass/components/card.scss */
+.card .card-content .content-expanded {
+  line-height: 16px;
+  margin: 10px 0;
+}
+/* line 78, sass/components/card.scss */
+.card .card-content .button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+/* line 81, sass/components/card.scss */
+.card .card-content .button-container .button {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-
-  /* width: 226px; */
   height: 36px;
-  color: var(--white);
-  
-  background: var(--blue);
+  color: #FFFFFF;
+  background: #0058B9;
   border-radius: 20px;
-
   margin: 0 10px;
-  padding: 0 10px;
+  padding: 0 12.5px;
 }
+/* line 94, sass/components/card.scss */
+.card .card-content .button-container .button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* line 2, sass/components/widget.scss */
+.widgets-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 7, sass/components/widget.scss */
+.widget {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  border: 1px solid #D9DBE9;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+/* line 16, sass/components/widget.scss */
+.widget .widget-title {
+  font-size: 1.5em;
+  line-height: 2em;
+  font-weight: bold;
+  color: #14142B;
+}
+/* line 22, sass/components/widget.scss */
+.widget .underline {
+  width: 20px;
+  height: 5px;
+  border-radius: 30px;
+  background-color: #5A5A89;
+  margin-top: 8px;
+}
+/* line 29, sass/components/widget.scss */
+.widget .tags-container {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+/* line 35, sass/components/widget.scss */
+.pie {
+  height: 275px;
+}
+
+/* line 38, sass/components/widget.scss */
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+}
+/* line 44, sass/components/widget.scss */
+.tag-container .tag-name {
+  margin: 0 10px;
+}
+/* line 47, sass/components/widget.scss */
+.tag-container .pb-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 10px;
+}
+/* line 52, sass/components/widget.scss */
+.tag-container .pb-container .pb-percentage {
+  font-size: 0.875em;
+  line-height: 16px;
+  margin: 0 10px;
+}
+/* line 57, sass/components/widget.scss */
+.tag-container .pb-container .pb-bar {
+  width: 190px;
+  height: 12px;
+  background: #F3F3FF;
+  border-radius: 6px;
+}
+/* line 62, sass/components/widget.scss */
+.tag-container .pb-container .pb-bar div {
+  background-color: #0058B9;
+  border-radius: 6px;
+  height: 12px;
+}
+
+/* line 1, sass/components/select.scss */
+.select-container {
+  display: inline-flex;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 0 15px;
+}
+
+/* line 8, sass/components/select.scss */
+.left-border {
+  border-left: 1px solid #D9DBE9;
+  border-radius: 0 10px 10px 0;
+}
+
+/* line 12, sass/components/select.scss */
+.right-margin {
+  margin-right: 20px;
+}
+
+/* line 15, sass/components/select.scss */
+.select {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 15px 0;
+  width: 145px;
+  cursor: pointer;
+  font-size: 0.875em;
+  line-height: 22px;
+  border: none;
+  outline-width: 0;
+}
+
+/* line 29, sass/components/select.scss */
+.squared-select {
+  padding: 0;
+  height: 40px;
+  border-radius: 0 10px 10px 0;
+}
+
+/* line 27, sass/style.scss */
+body {
+  margin: 0;
+  background: #F8F8FF;
+  font-family: 'Roboto', sans-serif;
+  color: #5A5A89;
+  font-size: 0.8750em;
+  line-height: 1em;
+}
+
+/* line 36, sass/style.scss */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(90, 90, 137, 0.5);
+}
+
+/* line 39, sass/style.scss */
+.page-content-wrapper {
+  width: 80%;
+  margin: auto;
+}
+/* line 42, sass/style.scss */
+.page-content-wrapper .filters {
+  margin: 10px 0;
+}
+/* line 45, sass/style.scss */
+.page-content-wrapper .page-content {
+  display: grid;
+  grid-template-columns: 28fr 12fr 1fr;
+  grid-column-gap: 15px;
+  margin: auto;
+  border-top: 1px solid rgba(217, 219, 233, 0.5);
+  padding-top: 20px;
+}
+/* line 52, sass/style.scss */
+.page-content-wrapper .page-content .cards-container {
+  display: flex;
+  flex-direction: column;
+}
+/* line 55, sass/style.scss */
+.page-content-wrapper .page-content .cards-container .card-expanded {
+  height: auto;
+}
+
+/* line 62, sass/style.scss */
 .inline-button {
   display: inline-flex;
 }
+
+/* line 65, sass/style.scss */
+.block-button {
+  width: 100%;
+}
+
+/* line 68, sass/style.scss */
 .button > * {
   margin: 0 5px;
 }
+
+/* line 71, sass/style.scss */
 .button > span {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 26px;
+  font-size: 1em;
+  line-height: 1.625em;
   display: flex;
   align-items: center;
   letter-spacing: 0.25px;
   text-transform: uppercase;
-  
   color: #FFFFFF;
 }
-.test {
-  display: inline-flex;
-  background-color: blueviolet;
-  border-radius: 10px;
-  justify-content: center;
-  align-items: center;
+
+/* line 85, sass/style.scss */
+.icon {
+  cursor: pointer;
 }

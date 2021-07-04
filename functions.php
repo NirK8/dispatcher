@@ -14,7 +14,8 @@ function dispatcher_scripts() {
   // Google fonts
   wp_enqueue_style('google_font', 'https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap', array(), '1.0.0');
   wp_enqueue_style('google_font', 'https://fonts.googleapis.com/css2&family=Roboto:wght@400;700&display=swap', array(), '1.0.0');
-  // wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true);
+  // js
+  wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true);
 } 
 
 add_action('wp_enqueue_scripts', 'dispatcher_styles');
@@ -29,5 +30,37 @@ function console_log($output, $with_script_tags = true) {
   }
   echo $js_code;
 }
-
+function print_article_card($article) {
+  get_template_part('partials/card', null, array($article));
+}
+function print_option($option){
+  $name = ucfirst($option[0]);
+  $value = $option[1];
+  ?>    
+  <option value="<?php echo $value ?>"><?php echo $name ?></option>
+  <?php
+}
+function cut_text($text, $limit) {
+  if (strlen($text) > $limit) {
+    for ($i = $limit; $i > 0; $i--) {
+      if (
+        $text[$i] === " " &&
+        ($text[$i-1] !== "," ||
+          $text[$i-1] != "." ||
+          $text[$i-1] !== ";")
+      ) {
+        return substr($text, 0, $i) . "...";
+      }
+    }
+    return substr($text, 0, $limit) . "...";
+  } else return $text;
+}
+function print_tag($tag) {
+  get_template_part('partials/tag', null, $tag);
+}
+function echo_source($source) {
+  $name = $source[0];
+  $percent = $source[1];
+  return "['".$name."', ".$percent."], ";
+}
 ?>
